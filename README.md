@@ -20,3 +20,4 @@
 * ANSI C
 * FHS 3.0
 * POSIX.1-2017
+* GNU Coding Standards (partialy)
