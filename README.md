@@ -9,6 +9,7 @@
 |etc     | System settings templates      |
 |include | C, C++ Header files            |
 |lib     | Libraries                      |
+|man     | Manual pages
 |sbin    | Essential system commands      |
 |sys     | Kernel                         |
 |tests   |                                |
@@ -20,4 +21,4 @@
 * ANSI C
 * FHS 3.0
 * POSIX.1-2017
-* GNU Coding Standards (partialy)
+* GNU Coding Standards (partialy; no GNU code style nor info pages)
