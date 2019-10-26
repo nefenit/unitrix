@@ -1,0 +1,3 @@
+# Pathnames of valid login shells for more details see shells(5)
+
+/bin/sh
