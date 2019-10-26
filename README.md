@@ -23,5 +23,5 @@ when separated from this project.
 ## Project Standards
 * ANSI C
 * FHS 3.0
-* POSIX.1-2017
+* [POSIX.1-2017](https://pubs.opengroup.org/onlinepubs/9699919799/nframe.html)
 * GNU Coding Standards (partialy; no GNU code style nor info pages)
