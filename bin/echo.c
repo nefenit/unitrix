@@ -1,6 +1,6 @@
 #define PROGRAM_NAME          "echo"
 #define PROGRAM_VERSION       "1.0"
-#define PACKAGE_NAME          "bin"
+#define PACKAGE_NAME          "Unitrix bin"
 #define COPYRIGTH_HOLDER      "Bartosz Mierzynski"
 #define COPYRIGTH_YEAR        "2019"
 #define LICENSE_ABBREVIATION  "none"
