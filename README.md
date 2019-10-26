@@ -1,7 +1,7 @@
 # Unitrix
 > Unix-like homebrew OS
 
-Each program is intended to compile and work on any UNIX/UNIX-like when separated from this project 
+Each program is intended to compile and work on any UNIX/UNIX-like when separated from this project.
 
 ## Project Roadmap
 |Folder  | Description                    |
