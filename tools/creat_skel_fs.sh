@@ -1,7 +1,7 @@
 #!/bin/sh
 
 for dir in bin boot dev home lib media mnt opt root run sbin srv tmp \
-	etc etc/opt etc/X11 etc/sgml etc/xml \
+	etc etc/opt etc/X11 etc/sgml etc/xml etc/skel \
 	usr usr/bin usr/include usr/lib usr/libexec usr/local usr/local/share \
 	usr/sbin/ usr/share usr/share/color usr/share/dict usr/share/man \
 	usr/share/misc usr/share/ppd usr/share/sgml usr/share/xml usr/src \
