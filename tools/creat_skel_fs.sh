@@ -10,6 +10,6 @@ for dir in bin boot dev home lib media mnt opt root run sbin srv tmp \
 	var/log var/mail var/opt var/run var/spool var/spool/lpd var/spool/rwho \
 	var/tmp var/yp
 do
-	mkdir -p $dir
+	mkdir -p "${1:-.}/$dir"
 done
 unset dir
