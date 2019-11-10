@@ -14,7 +14,12 @@
 #include <string.h>
 
 void usage(int status) {
-	printf("usage: %s [--help|--version]\n", PROGRAM_NAME);
+	printf(
+	"usage: %s [OPTION]\n"
+	"Options:\n"
+	"  --help     display this help and exit\n"
+	"  --version  output version information and exit\n",
+	PROGRAM_NAME);
 	exit(status);
 }
 
