@@ -1,26 +1,27 @@
-#define PROGRAM_NAME          "uname"
-#define PROGRAM_VERSION       "1.0"
-#define PACKAGE_NAME          "Unitrix bin"
-#define COPYRIGTH_HOLDER      "Bartosz Mierzynski"
-#define COPYRIGTH_YEAR        "2019"
-#define LICENSE_ABBREVIATION  "none"
-#define LICENSE_LINE          ""
+#define PROGRAM_NAME         "uname"
+#define PROGRAM_VERSION      "1.0"
+#define PACKAGE_NAME         "Unitrix bin"
+#define COPYRIGTH_HOLDER     "Bartosz Mierzynski"
+#define COPYRIGTH_YEAR       "2019"
+#define LICENSE_ABBREVIATION "none"
+#define LICENSE_LINE         ""
 
+#include <getopt.h>
+#include <limits.h>
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
-#include <limits.h>
-#include <sys/utsname.h>
-#include <getopt.h>
 
-typedef enum {
+#include <sys/utsname.h>
+
+enum {
 	FLAG_MACHINE  = 1<<0,
 	FLAG_NODENAME = 1<<1,
 	FLAG_RELEASE  = 1<<2,
 	FLAG_SYSNAME  = 1<<3,
 	FLAG_VERSION  = 1<<4,
 	FLAG_ALL = FLAG_MACHINE|FLAG_NODENAME|FLAG_RELEASE|FLAG_SYSNAME|FLAG_VERSION
-} flags_t;
+} flags;
 
 void usage(int status) {
 	printf("usage: %s [-amnrsv]\n", PROGRAM_NAME);
@@ -44,9 +45,6 @@ void version(const char* program_name, const char* program_version) {
 }
 
 int main(int argc, char **argv) {
-	struct utsname u;
-	flags_t flags = 0;
-	int c, sp = 0;
 	const struct option longopts [] = {
 	{"all",            no_argument, NULL, 'a'},
 	{"machine",        no_argument, NULL, 'm'},
@@ -58,6 +56,8 @@ int main(int argc, char **argv) {
 	{"version",        no_argument, NULL, CHAR_MIN-3},
 	{NULL,             0,           NULL, 0}
 	};
+	struct utsname u;
+	int c, sp = 0;
 	
 	setlocale(LC_ALL, "");
 	

@@ -1,19 +1,20 @@
-#define PROGRAM_NAME          "pwd"
-#define PROGRAM_VERSION       "1.0"
-#define PACKAGE_NAME          "Unitrix bin"
-#define COPYRIGTH_HOLDER      "Bartosz Mierzynski"
-#define COPYRIGTH_YEAR        "2019"
-#define LICENSE_ABBREVIATION  "none"
-#define LICENSE_LINE          ""
+#define PROGRAM_NAME         "pwd"
+#define PROGRAM_VERSION      "1.0"
+#define PACKAGE_NAME         "Unitrix bin"
+#define COPYRIGTH_HOLDER     "Bartosz Mierzynski"
+#define COPYRIGTH_YEAR       "2019"
+#define LICENSE_ABBREVIATION "none"
+#define LICENSE_LINE         ""
 
+#include <getopt.h>
+#include <limits.h>
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <locale.h>
-#include <limits.h>
 #include <unistd.h>
+
 #include <sys/stat.h>
-#include <getopt.h>
 
 void usage(int status) {
 	printf("usage: %s [OPTION]\n", PROGRAM_NAME);

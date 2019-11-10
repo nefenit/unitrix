@@ -1,17 +1,17 @@
-#define PROGRAM_NAME          "sleep"
-#define PROGRAM_VERSION       "1.0"
-#define PACKAGE_NAME          "Unitrix bin"
-#define COPYRIGTH_HOLDER      "Bartosz Mierzynski"
-#define COPYRIGTH_YEAR        "2019"
-#define LICENSE_ABBREVIATION  "none"
-#define LICENSE_LINE          ""
+#define PROGRAM_NAME         "sleep"
+#define PROGRAM_VERSION      "1.0"
+#define PACKAGE_NAME         "Unitrix bin"
+#define COPYRIGTH_HOLDER     "Bartosz Mierzynski"
+#define COPYRIGTH_YEAR       "2019"
+#define LICENSE_ABBREVIATION "none"
+#define LICENSE_LINE         ""
 
+#include <getopt.h>
+#include <locale.h>
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 #include <unistd.h>
-#include <getopt.h>
-#include <signal.h>
 
 void usage(int status) {
 	printf("usage: %s time\n", PROGRAM_NAME);
@@ -38,9 +38,8 @@ int main(int argc, char **argv) {
 
 	argc -= optind;
 
-	if(argc != 1) {
+	if(argc != 1)
 		usage(EXIT_FAILURE);
-	}
 
 	sleep(strtoul(argv[1], NULL, 0));
 	

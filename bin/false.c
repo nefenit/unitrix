@@ -1,22 +1,20 @@
-#define PROGRAM_NAME          "false"
-#define PROGRAM_VERSION       "1.0"
-#define PACKAGE_NAME          "Unitrix bin"
-#define COPYRIGTH_HOLDER      "Bartosz Mierzynski"
-#define COPYRIGTH_YEAR        "2019"
-#define LICENSE_ABBREVIATION  "none"
-#define LICENSE_LINE          ""
+#define PROGRAM_NAME         "false"
+#define PROGRAM_VERSION      "1.0"
+#define PACKAGE_NAME         "Unitrix bin"
+#define COPYRIGTH_HOLDER     "Bartosz Mierzynski"
+#define COPYRIGTH_YEAR       "2019"
+#define LICENSE_ABBREVIATION "none"
+#define LICENSE_LINE         ""
 
 #define STREQ(a, b)  (strcmp(a, b) == 0)
 
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <locale.h>
 
 void usage(int status) {
-	printf(
-	"usage: %s [--help|--version]\n",
-	PROGRAM_NAME);
+	printf("usage: %s [--help|--version]\n", PROGRAM_NAME);
 	exit(status);
 }
 
