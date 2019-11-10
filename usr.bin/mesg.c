@@ -1,16 +1,17 @@
-#define PROGRAM_NAME          "mesg"
-#define PROGRAM_VERSION       "1.0"
-#define PACKAGE_NAME          "Unitrix bin"
-#define COPYRIGTH_HOLDER      "Bartosz Mierzynski"
-#define COPYRIGTH_YEAR        "2019"
-#define LICENSE_ABBREVIATION  "none"
-#define LICENSE_LINE          ""
+#define PROGRAM_NAME         "mesg"
+#define PROGRAM_VERSION      "1.0"
+#define PACKAGE_NAME         "Unitrix usr.bin"
+#define COPYRIGTH_HOLDER     "Bartosz Mierzynski"
+#define COPYRIGTH_YEAR       "2019"
+#define LICENSE_ABBREVIATION "none"
+#define LICENSE_LINE         ""
 
+#include <getopt.h>
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 #include <unistd.h>
-#include <getopt.h>
+
 #include <sys/stat.h>
 
 enum {
@@ -42,8 +43,7 @@ int main(int argc, char **argv) {
 	argc -= optind;
 	argv += optind;
 
-	if(
-		(tty = ttyname(STDIN_FILENO)) == NULL
+	if((tty = ttyname(STDIN_FILENO)) == NULL
 		&& (tty = ttyname(STDOUT_FILENO)) == NULL 
 		&& (tty = ttyname(STDERR_FILENO)) == NULL
 	){
