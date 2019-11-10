@@ -15,12 +15,16 @@
 #include <sys/utsname.h>
 
 enum {
-	FLAG_MACHINE  = 1<<0,
-	FLAG_NODENAME = 1<<1,
-	FLAG_RELEASE  = 1<<2,
-	FLAG_SYSNAME  = 1<<3,
-	FLAG_VERSION  = 1<<4,
-	FLAG_ALL = FLAG_MACHINE|FLAG_NODENAME|FLAG_RELEASE|FLAG_SYSNAME|FLAG_VERSION
+	FLAG_MACHINE  = 1 << 0,
+	FLAG_NODENAME = 1 << 1,
+	FLAG_RELEASE  = 1 << 2,
+	FLAG_SYSNAME  = 1 << 3,
+	FLAG_VERSION  = 1 << 4,
+	FLAG_ALL      = FLAG_MACHINE
+	              | FLAG_NODENAME
+	              | FLAG_RELEASE
+	              | FLAG_SYSNAME
+	              | FLAG_VERSION
 } flags;
 
 void usage(int status) {
@@ -45,7 +49,7 @@ void version(const char* program_name, const char* program_version) {
 }
 
 int main(int argc, char **argv) {
-	const struct option longopts [] = {
+	const struct option longopts[] = {
 	{"all",            no_argument, NULL, 'a'},
 	{"machine",        no_argument, NULL, 'm'},
 	{"nodename",       no_argument, NULL, 'n'},

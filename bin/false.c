@@ -35,7 +35,6 @@ void version(const char* program_name, const char* program_version) {
 }
 
 int main(int argc, char *argv[]) {
-	
 	setlocale(LC_ALL, "");
 	
 	if(argc == 2) {

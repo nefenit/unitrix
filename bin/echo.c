@@ -13,17 +13,17 @@
 #define ECHO_GNU
 #endif
 
+#include <ctype.h>
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <locale.h>
-#include <ctype.h>
 
-typedef enum {
-	FLAG_TRAILING_NEWLINE  = 1<<0,
-	FLAG_SPACES            = 1<<1,
-	FLAG_INTERPRET_ESCAPES = 1<<2
-} flags_t;
+enum {
+	FLAG_TRAILING_NEWLINE  = 1 << 0,
+	FLAG_SPACES            = 1 << 1,
+	FLAG_INTERPRET_ESCAPES = 1 << 2
+} flags;
 
 void usage(int status) {
 	printf(
@@ -192,7 +192,7 @@ int print_escaped(char *s){
 
 int main(int argc, char **argv) {
 	int i, status = 0;
-	flags_t flags = FLAG_SPACES|FLAG_TRAILING_NEWLINE;
+	flags = FLAG_SPACES|FLAG_TRAILING_NEWLINE;
 #ifdef ECHO_SYSV
 	flags |= FLAG_INTERPRET_ESCAPES;
 #endif /* ECHO_SYSV */

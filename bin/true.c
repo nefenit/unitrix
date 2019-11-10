@@ -14,9 +14,7 @@
 #include <string.h>
 
 void usage(int status) {
-	printf(
-	"usage: %s [--help|--version]\n",
-	PROGRAM_NAME);
+	printf("usage: %s [--help|--version]\n", PROGRAM_NAME);
 	exit(status);
 }
 
@@ -37,7 +35,6 @@ void version(const char* program_name, const char* program_version) {
 }
 
 int main(int argc, char *argv[]) {
-	
 	setlocale(LC_ALL, "");
 	
 	if(argc == 2) {
